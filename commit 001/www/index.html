@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/af.ui.min.css">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <!--            
+            You may substitute jQuery for the App Framework selector library.
+            See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+        -->
+        <script type="application/javascript" src="app_framework/2.1/appframework.js"></script>
+        <script type="application/javascript" src="app_framework/2.1/appframework.ui.js" data-ver="1"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <!-- <script type="application/javascript" src="app_framework/pageChangeRepeater.js"></script>  -->
+        <script type="application/javascript" src="js/nombres.js"></script>
+        <!--            
+            You may substitute jQuery for the App Framework selector library.
+            See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+        -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+    </head>
+
+    <body id="afui">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <header class="wrapping-col wrap-element uib_w_1" data-uib="app_framework/header" data-ver="2" id="af-header-0">
+            <h1>INGRESAR</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_6 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-1"><a class="button backButton">Back</a>
+            <h1>NOMBRES</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_15 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-2"><a class="button backButton">Back</a>
+            <h1>REGISTRO</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_16 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-3"><a class="button backButton">Back</a>
+            <h1>INFORMACION</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_34 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-4"><a class="button backButton">Back</a>
+            <h1>ALERTAS</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_43 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-5"><a class="button backButton">Back</a>
+            <h1>ENVIO E-MAIL</h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_54" data-uib="app_framework/header" data-ver="2" id="af-header-6">
+            <h1></h1>
+        </header>
+        <header class="wrapping-col wrap-element uib_w_72 with-back" data-uib="app_framework/header" data-ver="2" id="af-header-7"><a class="button backButton">Back</a>
+            <h1>roberth coopa</h1>
+        </header>
+        <div class="uwrap" id="content">
+            <div class="upage panel fff masd" id="mainpage" data-header="af-header-0" data-footer="af-footer-0">
+                <div class="upage-outer">
+                    <div class="upage-content ac0 content-area vertical-col" id="page_49_78">
+                        <div class="table-thing with-label widget uib_w_3 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                            <label class="narrow-control label-top-left">controla el ciclo mestrual de una mujer</label>
+                        </div>
+                        <div class="table-thing with-label widget uib_w_65 d-margins" data-uib="app_framework/input" data-ver="1">
+                            <label class="narrow-control label-inline" for="idUsuario">Usuario</label>
+
+                            <input class="wide-control" placeholder="Placeholder Text" type="text" id="idUsuario" value="jumanor">
+                        </div>
+                        <div class="table-thing with-label widget uib_w_66 d-margins" data-uib="app_framework/input" data-ver="1">
+                            <label class="narrow-control label-inline" for="idPassw">Password</label>
+
+                            <input class="wide-control" placeholder="Placeholder Text" type="text" id="idPassw" value="jumanor">
+                        </div>
+                        <a class="button widget uib_w_5 d-margins green" data-uib="app_framework/button" data-ver="1" id="irLogin" href="#idPageNOMBRES">INGRESAR</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="upage vertical-col left panel fff masd" id="idPageNOMBRES" data-header="af-header-1" data-footer="none">
+                <ul class="list widget uib_w_67 d-margins" data-uib="app_framework/listview" data-ver="1" id="idNombres">
+                    <li class="widget uib_w_68" data-uib="app_framework/listitem" data-ver="1"> <a>rosa</a>
+                    </li>
+                    <li class="widget uib_w_69" data-uib="app_framework/listitem" data-ver="1"><a>maria</a>
+                    </li>
+                    <li class="widget uib_w_70" data-uib="app_framework/listitem" data-ver="1"><a>juana</a>
+                    </li>
+                </ul>
+                <div class="button-grouped flex widget uib_w_11 d-margins" data-uib="app_framework/button_group" data-ver="1"><a class="button widget uib_w_12 icon user green" data-uib="app_framework/button" data-ver="1" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(102, 102, 102); border-top-left-radius: 6px; border-bottom-left-radius: 6px;"
+                    href="#REGISTRO" data-transition="fade">NUEVO</a><a class="button widget uib_w_13 icon pencil orange" data-uib="app_framework/button" data-ver="1" href="#REGISTRO" data-transition="fade">MODIFICAR</a>
+                </div>
+
+            </div>
+            <div class="upage panel vertical-col fff masd" id="REGISTRO" data-header="af-header-2" data-footer="none">
+                <div class="table-thing with-label widget uib_w_17 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">NOMBRES:</label>
+
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div>
+                <div class="table-thing with-label widget uib_w_33 d-margins negrita" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">Registrar 1er dia de mestruacion anterior</label>
+                </div>
+
+                <div class="table-thing with-label widget uib_w_55 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">fecha:</label>
+
+                    <input class="wide-control" type="date">
+                </div><a class="button widget uib_w_40 d-margins icon right gray" data-uib="app_framework/button" data-ver="1" href="#ALERTAS" data-transition="fade">ACTIVAR ALARMAS</a>
+                <div class="table-thing with-label widget uib_w_59 d-margins FORMA1" data-uib="app_framework/radio_button_group" data-ver="1" data-child-name="af-group-0">
+                    <label class="narrow-control label-inline">SELECCIONAR ENVIOS MNSJ</label>
+                    <div class="wide-control">
+                        <div class="widget uib_w_60" data-uib="app_framework/radio_button" data-ver="1">
+                            <input type="radio" id="af-radio-0" name="af-group-0">
+                            <label class="content-box" for="af-radio-0">E-MAIL</label>
+                        </div>
+                        <div class="widget uib_w_61" data-uib="app_framework/radio_button" data-ver="1">
+                            <input type="radio" id="af-radio-1" name="af-group-0">
+                            <label class="content-box" for="af-radio-1">CELULAR</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-thing with-label widget uib_w_63 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">E-Mail:</label>
+                    <input class="wide-control" type="email">
+                </div>
+                <div class="table-thing with-label widget uib_w_64 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">Celular:</label>
+                    <input class="wide-control" type="tel">
+                </div>
+                <div class="button-grouped flex widget uib_w_18 d-margins" data-uib="app_framework/button_group" data-ver="1"><a class="button widget uib_w_19 icon check green" data-uib="app_framework/button" data-ver="1" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(102, 102, 102); border-top-left-radius: 6px; border-bottom-left-radius: 6px;"
+                    href="#NOMBRES" data-transition="fade">ACEPTAR</a><a class="button widget uib_w_20 icon close yellow" data-uib="app_framework/button" data-ver="1" href="#NOMBRES" data-transition="fade">CANCELAR</a>
+                </div>
+            </div>
+            <div class="upage vertical-col panel fff" id="INFORMACION" data-header="af-header-3" data-footer="none">
+                <div class="table-thing with-label widget uib_w_21 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-inline">NOMBRES:</label>
+                    <input class="wide-control" placeholder="Placeholder Text" type="text">
+                </div>
+
+                <div class="table-thing with-label widget uib_w_22 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">1er dia de menstruacion, no hay riesgo</label>
+
+                    <input class="wide-control" type="date">
+                </div>
+                <div class="table-thing with-label widget uib_w_23 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">Menstruacion, no hay riesgo</label>
+
+                    <input class="wide-control" type="date">
+                </div>
+                <div class="table-thing with-label widget uib_w_24 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">Dias infertiles y de bajo riesgo</label>
+
+                    <input class="wide-control" type="date">
+                </div>
+                <div class="table-thing with-label widget uib_w_25 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">Dias fertiles, alto riesgo</label>
+
+                    <input class="wide-control" type="date">
+                </div>
+                <div class="table-thing with-label widget uib_w_26 d-margins FORMA1" data-uib="app_framework/input" data-ver="1">
+                    <label class="narrow-control label-top-left">Ovulacion, muy alto riesgo</label>
+
+                    <input class="wide-control" type="date">
+                </div>
+                <div class="button-grouped flex widget uib_w_27 d-margins" data-uib="app_framework/button_group" data-ver="1"><a class="button widget uib_w_28 icon up orange" data-uib="app_framework/button" data-ver="1" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(102, 102, 102); border-top-left-radius: 6px; border-bottom-left-radius: 6px;"
+                    href="#mainpage" data-transition="fade">SALIR</a>
+                    <a class="button widget uib_w_29 icon error red" data-uib="app_framework/button" data-ver="1" href="#NOMBRES" data-transition="fade">ELIMINAR</a>
+                </div>
+            </div>
+            <div class="upage vertical-col panel fff" id="ALERTAS" data-header="af-header-4" data-footer="none">
+                <div class="table-thing with-label widget uib_w_35 d-margins FORMA1" data-uib="app_framework/flip_switch" data-ver="1">
+                    <label class="narrow-control label-top-left">1er dia de menstruacion, no hay riesgo</label>
+                    <div class="wide-control">
+                        <input type="checkbox" class="toggle" id="af-flipswitch-1">
+                        <label for="af-flipswitch-1" data-off="No" data-on="Yes"><span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="table-thing with-label widget uib_w_36 d-margins FORMA1 negrita" data-uib="app_framework/flip_switch" data-ver="1">
+                    <label class="narrow-control label-top-left">Menstruacion, no hay riesgo</label>
+                    <div class="wide-control">
+                        <input type="checkbox" class="toggle" id="af-flipswitch-2">
+                        <label for="af-flipswitch-2" data-off="No" data-on="Yes"><span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="table-thing with-label widget uib_w_37 d-margins FORMA1" data-uib="app_framework/flip_switch" data-ver="1">
+                    <label class="narrow-control label-top-left">Dias infertiles y de bajo riesgo</label>
+                    <div class="wide-control">
+                        <input type="checkbox" class="toggle" id="af-flipswitch-3">
+                        <label for="af-flipswitch-3" data-off="No" data-on="Yes"><span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="table-thing with-label widget uib_w_38 d-margins FORMA1" data-uib="app_framework/flip_switch" data-ver="1">
+                    <label class="narrow-control label-top-left">Dias fertiles, alto riesgo</label>
+                    <div class="wide-control">
+                        <input type="checkbox" class="toggle" id="af-flipswitch-4">
+                        <label for="af-flipswitch-4" data-off="No" data-on="Yes"><span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="table-thing with-label widget uib_w_39 d-margins negrita FORMA1" data-uib="app_framework/flip_switch" data-ver="1">
+                    <label class="narrow-control label-top-left">Ovulacion, muy alto riesgo</label>
+                    <div class="wide-control">
+                        <input type="checkbox" class="toggle" id="af-flipswitch-5">
+                        <label for="af-flipswitch-5" data-off="No" data-on="Yes"><span></span>
+                        </label>
+                    </div>
+                </div>
+                <audio class="widget uib_w_41 d-margins" data-uib="media/audio" data-ver="0" controls="controls">
+                    <source src="my/video/src.mp3" type="audio/mpeg">
+                        <source src="my/video/src.ogg" type="audio/ogg">
+                </audio>
+
+            </div>
+            <div class="table-thing with-label widget uib_w_53 d-margins negrita" data-uib="app_framework/select" data-ver="1">
+                <label class="narrow-control label-inline">SELECCIONAR</label>
+                <select class="wide-control">
+                    <option>E-MAIL</option>
+                    <option>NUMERO CELULAR</option>
+                </select>
+            </div>
+            <div class="table-thing with-label widget uib_w_56 d-margins" data-uib="app_framework/radio_button_group" data-ver="1" data-child-name="af-group-1">
+                <div class="wide-control">
+                    <div class="widget uib_w_57" data-uib="app_framework/radio_button" data-ver="1">
+                        <input type="radio" id="af-radio-4" name="af-group-1">
+                        <label class="content-box" for="af-radio-4">EMAIL</label>
+                    </div>
+                    <div class="widget uib_w_58" data-uib="app_framework/radio_button" data-ver="1">
+                        <input type="radio" id="af-radio-5" name="af-group-1">
+                        <label class="content-box" for="af-radio-5">Radio</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upage panel" id="idPageRoberth" data-header="af-header-7" data-footer="af-footer-1">
+                <div class="upage-outer">
+                    <div class="upage-content ac0 content-area vertical-col" id="page_12_4">
+                        <ul class="list widget uib_w_74 d-margins" data-uib="app_framework/listview" data-ver="1" id="idRoberth">
+                            <li class="widget uib_w_75" data-uib="app_framework/listitem" data-ver="1"><a>List Item</a>
+                            </li>
+                            <li class="widget uib_w_76" data-uib="app_framework/listitem" data-ver="1"><a>List Item</a>
+                            </li>
+                            <li class="widget uib_w_77" data-uib="app_framework/listitem" data-ver="1"><a>List Item</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <nav class="af-sidemenu inner-element uib_w_71" data-uib="app_framework/side_menu_area" data-ver="1">
+                        <div class="sidebar-content">
+                            <div class="col uib_col_1 single-col" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+                                    <span class="uib_shim"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <footer class="wrap-element uib_w_73" data-uib="app_framework/footer" data-ver="1" id="af-footer-1"></footer>
+        <footer class="wrap-element uib_w_2" data-uib="app_framework/footer" data-ver="1" id="af-footer-0"></footer>
+    </body>
+
+</html>
